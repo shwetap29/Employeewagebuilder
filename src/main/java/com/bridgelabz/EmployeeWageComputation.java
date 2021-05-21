@@ -4,12 +4,12 @@ public class EmployeeWageComputation {
     public static void main(String[] args) {
         System.out.println("Welcome to the Employee Wage computation");
 
-        int maxWorkingDays=20;
+        int maxWorkingDays=0;
         int ratePerHr = 20;
         int totalHr =0;
         int empHr = 0, dailyWage;
 
-        for (int i=0; i<=maxWorkingDays; i++) {
+        while (maxWorkingDays<=20 && totalHr<=100) {
             double checkEmp = Math.floor(Math.random() * 10) % 3;
             int c = (int) checkEmp;
 
@@ -20,7 +20,7 @@ public class EmployeeWageComputation {
                 case 2:
                     empHr = 4;
                     break;
-                case 3:
+                default:
                     empHr = 0;
                     break;
             }
